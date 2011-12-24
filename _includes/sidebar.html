@@ -1,0 +1,28 @@
+<aside id="sidebar">
+  {% if site.related_posts %}
+  <h3>Related Posts</h3>
+  <ul>
+    {% for post in site.related_posts %}
+      <li>
+        <a href="{{post.url | url_encode }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  <h3><a href="/categories">Topics</a></h3>
+  <ul>
+    {% for category in site.sorted_categories %}
+    {% assign name = category[0] %}
+    {% assign size = category[1].size %}
+      <li>
+        <a href="/categories/{{ name | url_encode }}">
+          {{name}} ({{size}})
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+  <h3><a href="/tags">Tags</a></h3>
+  <div id="tagcloud">
+    {% tag_cloud %}
+  </div>
+</aside>

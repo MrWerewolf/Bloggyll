@@ -7,15 +7,17 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title></title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+  {% capture title %}{{ page.title }}{% if site.name %} | {{ site.name }}{% endif %}{% endcapture %}
+  <title>{{ title }}</title>
+
+  {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+  {% if page.author %}<meta name="author" content="{{ page.author }}">{% endif %}
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <!-- CSS concatenated and minified via ant build script-->
-  <link rel="stylesheet" href="css/style.css">
+  <!-- CSS build using Compass-->
+  <link rel="stylesheet" href="/css/style.css?{% render_timestamp %}">
   <!-- end CSS-->
 
-  <script src="js/libs/modernizr-2.0.6.min.js"></script>
+  <script src="/js/libs/modernizr-2.0.6.min.js"></script>
 </head>

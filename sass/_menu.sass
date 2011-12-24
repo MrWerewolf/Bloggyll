@@ -1,0 +1,24 @@
+/* ====
+ * Menu
+ * ====
+
+#nav
+  margin-bottom: 1em
+  ul
+    +inline-block-list
+    border-bottom: 1px solid $nav-border-color
+
+  a
+    +border-top-radius(5px)
+    +anchor-button
+    margin:
+      top: 0
+      left: 0
+      bottom: -1px
+      right: 0
+    +button-colors($nav-font-color, $nav-bg-color, $nav-border-color)
+    +button-hover-colors($nav-hover-font-color, $nav-hover-bg-color, $nav-hover-border-color)
+    +button-active-colors($nav-active-font-color, $nav-active-bg-color, $nav-active-border-color)
+    &.selected
+      +button-colors($nav-active-font-color, $nav-active-bg-color, $nav-active-border-color)
+

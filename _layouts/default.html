@@ -1,28 +1,38 @@
 {% include head.html %}
-<body>
-
+<body class="two-column">
+  <div id="root">
   <div id="container">
-    <header>
+      <header id="header">
+        <h1><a href="/">{{ site.name }}</a></h1>
+        {% if site.tagline %}<h2>{{ site.tagline }}</h2>{% endif %}
+      </header>
+      <nav id="nav">
+        <ul>
+          <li><a {% if page.url == "/index.html" %}class="selected"{% endif %}
+            href="/" rel="home">Home</a></li>
+          <li><a {% if page.url == "/archives/" %}class="selected"{% endif %}
+            href="/archives">Archives</a></li>
+          <li><a {% if page.url == "/about/" %}class="selected"{% endif %}
+            href="/about">About</a></li>
+        </ul>
+      </nav>
+      <div id="main" role="main">
+        {{ content }}
+      </div>
+      {% include sidebar.html %}
 
-    </header>
-    <div id="main" role="main">
-      {{ content }}
-    </div>
-    <footer>        
-      <h3>Site Pages</h3>
-      <ul>
-        <li><a href="/" rel="home">Home</a></li>
-        <li><a href="/about">About</a></li>
-      </ul>
-      <h3>Blog Posts</h3>          
-      <ul>
-        {% for post in site.posts %}
-          <li{% if page.url == post.url %} class="active"{% endif %}><a href="{{ post.url }}">{{ post.title }}</a></li>
-        {% endfor %}
-      </ul>
-    </footer>
-  </div> <!--! end of #container -->
-{% include scripts.html %}	        
+    </div> <!--! end of #container -->
+    <div id="root-footer"></div>
+  </div>
+<footer id="footer">
+  {% if site.author %}Copyright &copy; {{ site.author }} |{% endif %}
+  using the <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a> |
+  powered by <a href="https://github.com/mojombo/jekyll/wiki">Jekyll</a> and
+  <a href="http://compass-style.org/">Compass</a> |
+  <a href="/atom.xml"><span class="icon-feed"></span>&nbsp;Atom</a>
+</footer>
+
+{% include scripts.html %}
 {% include analytics.html %}
 {% include chromeframe.html %}
 </body>

@@ -1,0 +1,27 @@
+---
+layout: default
+title: Tags
+---
+<h1>Tags</h1>
+
+<div id="tags">
+{% for tag in site.sorted_tags %}
+{% assign name  = tag[0] %}
+{% assign posts = tag[1] %}
+    <section>
+        <h2 id="{{name | replace: ' ','-'}}" class='name'>{{ name }}</h2>
+        <ul class="posts">
+            {% for post in posts %}
+            {% assign tags = post.tag %}
+            {% if tags == nil %}
+                {% assign tags = post.tags %}
+            {% endif %}
+            <li>
+                <a class="post" href="{{ post.url }}">{{ post.title }}</a>
+                <aside class="tags">[{{ tags | tag_page_links }}]</aside>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+{% endfor %}
+</div>

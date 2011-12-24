@@ -1,0 +1,58 @@
+/* =============
+ * Post listings
+ * =============
+
+@mixin post-listing($cols: 5, $width: $blueprint-grid-columns)
+  section
+    +column($width - $cols)
+    +push($cols)
+  h2
+    +pull($cols)
+    +quiet
+    margin-top: 0.1em
+    font-size: 150%
+
+#archives
+  +post-listing(3)
+#tags, #categories
+  +post-listing
+
+.two-column
+  #archives
+    +post-listing(3, $blueprint-grid-columns - $sidebar-columns)
+  #tags, #categories
+    +post-listing(5, $blueprint-grid-columns - $sidebar-columns)
+
+ul.posts
+  +no-bullets
+  margin:
+    top: 0.5em
+    bottom: 2em
+    left: 0
+  padding-left: 0
+  time
+    +quiet
+  a.post
+    font-weight: bold
+
+#archives
+  h2
+    font-size: 250%
+  h3
+    margin-top: 0.4em
+    margin-bottom: 0
+  ul.posts
+    margin-left: 1em
+    time
+      font-weight: bold
+
+#tags
+  aside.tags
+    display: inline
+    font-size: 70%
+    line-height: 70%
+    margin-left: 1em
+    +quiet
+    a
+      +hover-link
+      +quiet

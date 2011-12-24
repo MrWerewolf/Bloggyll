@@ -1,0 +1,4 @@
+syntax: glob
+.sass-cache/
+_site/
+img/icon-*.png

@@ -1,0 +1,67 @@
+{% assign categories = post.category %}
+{% if categories == nil %}
+  {% assign categories = post.categories %}
+{% endif %}
+
+{% assign tags = post.tag %}
+{% if tags == nil %}
+  {% assign tags = post.tags %}
+{% endif %}
+
+{% if content %}
+  {% assign postpage = true %}
+{% endif %}
+
+<article
+  class="post {% if postpage %}post-page{% else %}post-listing{% endif %}">
+  <header>
+    {% if postpage %}
+    <h1>{{ post.title }}</h1>
+    {% else %}
+    <h2><a href="{{ post.url | url_encode }}">{{ post.title }}</a></h2>
+    {% endif %}
+    <p>
+      Written
+      <time pubdate datetime="{{ post.date | date_to_xmlschema }}">
+        {{ post.date | date:"%B %d, %Y" }}</time>{% if post.author %}
+          by {{ post.author }}{% endif %}.
+      {% if categories.size > 0 %}
+      In {{ categories | category_links }}.
+      {% endif %}
+      {% if tags.size > 0 %}
+      Tagged {{ tags | tag_links }}.
+      {% endif %}
+    </p>
+  </header>
+  <div class="content">
+  {% if postpage %}
+    {{ content }}
+  {% else %}
+    {% if post.excerpt %}
+      {{ post.excerpt }}
+      <p>
+        <span class="read-more">
+        <span class="icon-doc"></span>
+        <a href="{{ post.url | url_encode }}">Read more...</a>
+        </span>
+      </p>
+    {% else %}
+      {{ post.content }}
+    {% endif %}
+  {% endif %}
+  </div>
+  <footer>
+    {% if postpage %}
+      {% include disqus_comment.html%}
+    {% else %}
+    <ul>
+      <li class="comments">
+        <span class="icon-comment"></span>
+        <a href="{{ site.url }}{{ post.url | url_encode #disqus_thread }}">
+          Comments
+        </a>
+      </li>
+    </ul>
+    {% endif %}
+  </footer>
+</article>

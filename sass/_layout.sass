@@ -1,0 +1,35 @@
+/* ======
+ * Layout - defines the shape of the site.
+ * ======
+
+/* This makes the footer stick to the bottom.
+ * http://compass-style.org/reference/compass/layout/sticky_footer/
++sticky-footer($footer-height)
+
+/* Center the footer.
+#footer
+  text-align: center
+  width: +span($blueprint-grid-columns)
+  margin:
+    left: auto
+    right: auto
+
+/* Enable the Blueprint grid
+ * http://compass-style.org/reference/blueprint/grid/#mixin-container
+#container
+  +container
+
+  /* Prevent the content from smashing into the footer.
+  padding-bottom: $footer-height + 1.5em
+
+/* Two column layout.
+ * Use the pull method to make the sidebar appear on the right.
+ * Edit the $sidebar-columns value to adjust the width.
+ * http://compass-style.org/reference/blueprint/grid/#mixin-pull
+.two-column
+  #main
+    +column($blueprint-grid-columns - $sidebar-columns, true)
+    +prepend($sidebar-columns)
+  #sidebar
+    +column($sidebar-columns)
+    +pull($blueprint-grid-columns, true)

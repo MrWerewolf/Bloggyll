@@ -1,0 +1,39 @@
+$articleborder: 1px solid $blueprint-border-color
+
+article.post
+  header
+    margin-bottom: 0.5em
+    h1, h2, h3
+      border-bottom: $articleborder
+      margin-bottom: -1px
+      +header-text
+    a
+      +hover-link
+    p
+      +quiet
+      +inline-block
+      +border-bottom-radius(10px)
+      border:
+        bottom: $articleborder
+        left: $articleborder
+        right: $articleborder
+      margin: 0
+      padding:
+        left: 5px
+        right: 5px
+
+  &.post-listing footer
+    border-top: 1px dashed $blueprint-border-color
+    padding:
+      top: .4em
+      bottom: .8em
+    ul
+      +inline-list
+      +no-bullets
+    width: 35%
+    margin-left: auto
+    text-align: right
+  .content aside
+    +info
+    +border-radius
+
