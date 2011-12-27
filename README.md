@@ -1,5 +1,6 @@
 ---
 layout: default
+
 ---
 
 Jekyll Blog Boilerplate
@@ -25,6 +26,19 @@ Features
 * Code highlighting with [SyntaxHighlighter][highlighter]
 * Post excerpts
 * Associate files with a post
+
+Themes
+------
+
+This is a list of known themes that derive from the base boilerplate theme.
+Let me know if you make a public theme and I'll add it to the list.
+
+* **[War Room][war-room-src]** - Inspired by the interface to the
+ficticious game called *Global Thermonuclear War* from the 1983 film
+**WarGames**.
+
+
+[war-room-src]:https://github.com/MrWerewolf/Jekyll-Blog-Boilerplate/tree/War-Room_Theme
 
 Getting started
 ---------------
@@ -232,10 +246,12 @@ specifies global variables.  This comes recommended by Compass as part of their
 Contributing
 ------------
 
-Feel free to fork this project, send me pull requests, and issues.
+Feel free to fork this project, send me pull requests, and issues through [the
+project's github page][jekyll-boiler].
 
-This project is meant to be forked to create new themes.
+This project is intended to be forked to create new themes.
 
+[jekyll-boiler]: https://github.com/MrWerewolf/Jekyll-Blog-Boilerplate
 [jekyll]: http://jekyllrb.com/
 [jekyll-install]: https://github.com/mojombo/jekyll/wiki/install
 [jekyll-conf]: https://github.com/mojombo/jekyll/wiki/Configuration
