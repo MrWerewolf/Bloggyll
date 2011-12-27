@@ -11,6 +11,9 @@ tags:
     - Example
 ---
 
+This is a little markdown example.  For details on syntax please see the
+[kramdown Syntax](http://kramdown.rubyforge.org/syntax.html) page.
+
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -34,6 +37,8 @@ esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
 voluptas nulla pariatur?
 
 -----
+
+normal
 
 *italic*
 
@@ -83,3 +88,21 @@ voluptas nulla pariatur?
 **Inline code**
 
 Please don't run `rm -rf /`.
+
+-----
+
+**Tables**
+
+|---
+|       | Reps | Squat | Bench | Dead | Press |
+|:------|:----:|------:|------:|-----:|------:|
+|**Max**|n/a|**310**|**180**|**355**|**140**|
+|Week 1 | 5 | 200 | 115 | 230 |  90 |
+|       | 5 | 235 | 135 | 265 | 105 |
+|       | 5+| 265 | 155 | 300 | 120 |
+|Week 2 | 3 | 215 | 125 | 250 | 100 |
+|       | 3 | 250 | 145 | 285 | 110 |
+|       | 3+| 280 | 160 | 320 | 125 |
+|Week 3 | 5 | 235 | 135 | 255 | 105 |
+|       | 3 | 265 | 155 | 300 | 120 |
+|       | 1+| 295 | 170 | 335 | 135 |

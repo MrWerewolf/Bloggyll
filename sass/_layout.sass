@@ -18,9 +18,19 @@
  * http://compass-style.org/reference/blueprint/grid/#mixin-container
 #container
   +container
+  #header, #nav
+    +prepend($column-pad)
+    +append($column-pad)
+  #main, #sidebar
+    +append-bottom
 
-  /* Prevent the content from smashing into the footer.
-  padding-bottom: $footer-height + 1.5em
+/* Allows us to add a margin to the top of #container
+#root
+  overflow: auto
+
+/* Prevent the content from smashing into the footer.
+#root-footer
+  height: $footer-height + 24px
 
 /* Two column layout.
  * Use the pull method to make the sidebar appear on the right.
@@ -28,8 +38,10 @@
  * http://compass-style.org/reference/blueprint/grid/#mixin-pull
 .two-column
   #main
-    +column($blueprint-grid-columns - $sidebar-columns, true)
-    +prepend($sidebar-columns)
+    +column($blueprint-grid-columns - $sidebar-columns - ($column-pad * 2), true)
+    +append($column-pad)
+    +prepend($sidebar-columns + $column-pad)
   #sidebar
     +column($sidebar-columns)
+    +prepend($column-pad)
     +pull($blueprint-grid-columns, true)

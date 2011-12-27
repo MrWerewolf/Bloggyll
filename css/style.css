@@ -172,9 +172,12 @@ a img {
  * Author:
  * ========================================================================== */
 /* ======
+ *
  * Layout - defines the shape of the site.
+ *
  * ====== */
 /* This makes the footer stick to the bottom.
+ *
  * http://compass-style.org/reference/compass/layout/sticky_footer/ */
 html, body {
   height: 100%;
@@ -185,16 +188,16 @@ html, body {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin-bottom: -2em;
+  margin-bottom: -24px;
 }
 #root #root_footer {
-  height: 2em;
+  height: 24px;
 }
 
 #footer {
   clear: both;
   position: relative;
-  height: 2em;
+  height: 24px;
 }
 
 /* Center the footer. */
@@ -206,26 +209,46 @@ html, body {
 }
 
 /* Enable the Blueprint grid
+ *
  * http://compass-style.org/reference/blueprint/grid/#mixin-container */
 #container {
   width: 950px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
-  /* Prevent the content from smashing into the footer. */
-  padding-bottom: 3.5em;
+}
+#container #header, #container #nav {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+#container #main, #container #sidebar {
+  margin-bottom: 1.5em;
+}
+
+/* Allows us to add a margin to the top of #container */
+#root {
+  overflow: auto;
+}
+
+/* Prevent the content from smashing into the footer. */
+#root-footer {
+  height: 48px;
 }
 
 /* Two column layout.
+ *
  * Use the pull method to make the sidebar appear on the right.
+ *
  * Edit the $sidebar-columns value to adjust the width.
+ *
  * http://compass-style.org/reference/blueprint/grid/#mixin-pull */
 .two-column #main {
   display: inline;
   float: left;
   margin-right: 0;
-  width: 710px;
-  padding-left: 240px;
+  width: 630px;
+  padding-right: 40px;
+  padding-left: 280px;
 }
 * html .two-column #main {
   overflow-x: hidden;
@@ -235,6 +258,7 @@ html, body {
   float: left;
   margin-right: 10px;
   width: 230px;
+  padding-left: 40px;
   display: inline;
   float: left;
   position: relative;
@@ -245,7 +269,9 @@ html, body {
 }
 
 /* ======
+ *
  * Header - display rules for the site name, tagline, and logo (if any).
+ *
  * ====== */
 #header {
   padding-top: 1.5em;
@@ -262,7 +288,9 @@ html, body {
 }
 
 /* ====
+ *
  * Menu
+ *
  * ==== */
 #nav {
   margin-bottom: 1em;
@@ -273,12 +301,12 @@ html, body {
   border: 0;
   overflow: hidden;
   *zoom: 1;
-  border-bottom: 1px solid #dedede;
+  border-bottom: 1px solid #dddddd;
 }
 #nav ul li {
   list-style-image: none;
   list-style-type: none;
-  margin-left: 0px;
+  margin-left: 0;
   display: -moz-inline-box;
   -moz-box-orient: vertical;
   display: inline-block;
@@ -353,10 +381,14 @@ html, body {
 }
 
 /* ==========
+ *
  * Typography - general rules for text display.
+ *
  * ========== */
 /* Use Blueprint's typography
+ *
  * You can override default variables in _base
+ *
  * http://compass-style.org/reference/blueprint/typography/ */
 body {
   line-height: 1.5;
@@ -562,6 +594,13 @@ caption {
   font-weight: normal;
 }
 
+hr {
+  color: #333333;
+  background-color: #333333;
+  border-color: #dddddd;
+  height: 1px;
+}
+
 /* github-like code tags and pre tags */
 pre, code {
   color: #444444;
@@ -576,7 +615,7 @@ code {
   border-radius: 2px;
   background-color: #eeeeee;
   border: 1px solid #dddddd;
-  padding: 0.2em;
+  padding: 0.1em;
 }
 
 pre {
@@ -650,7 +689,9 @@ pre code {
 }
 
 /* ====
+ *
  * Form - applies blueprint style forms
+ *
  * ==== */
 form label {
   font-weight: bold;
@@ -704,7 +745,9 @@ form textarea {
 }
 
 /* =============
+ *
  * Post listings
+ *
  * ============= */
 #archives section {
   display: inline;
@@ -807,7 +850,7 @@ ul.posts {
 ul.posts li {
   list-style-image: none;
   list-style-type: none;
-  margin-left: 0px;
+  margin-left: 0;
 }
 ul.posts time {
   color: #666666;
@@ -909,28 +952,13 @@ article.post.post-listing footer ul, article.post.post-listing footer ul li {
 article.post.post-listing footer ul li {
   list-style-image: none;
   list-style-type: none;
-  margin-left: 0px;
-}
-article.post .content aside {
-  padding: 0.8em;
-  margin-bottom: 1em;
-  border: 2px solid #dddddd;
-  background: #d5edf8;
-  color: #205791;
-  border-color: #92cae4;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -o-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -khtml-border-radius: 5px;
-  border-radius: 5px;
-}
-article.post .content aside a {
-  color: #205791;
+  margin-left: 0;
 }
 
 /* ==========
+ *
  * Pagination
+ *
  * ========== */
 #pagination {
   -moz-border-radius-bottomleft: 10px;
@@ -960,7 +988,7 @@ article.post .content aside a {
 #pagination li {
   list-style-image: none;
   list-style-type: none;
-  margin-left: 0px;
+  margin-left: 0;
   display: -moz-inline-box;
   -moz-box-orient: vertical;
   display: inline-block;
@@ -987,8 +1015,11 @@ article.post .content aside a {
 }
 
 /* ===
+ *
  * Sprites with compass
+ *
  * http://compass-style.org/help/tutorials/spriting/
+ *
  * === */
 .icon-sprite, .icon-comment, .icon-doc, .icon-feed {
   background: url('/img/icon-s80c89e63f0.png') no-repeat;
@@ -1049,6 +1080,7 @@ span.icon-feed {
 }
 
 /* Right now I don't know if there's a good way to do with with
+ *
  * the icon mechanism provided by Compass. */
 a.external.text-only {
   background: url("/img/external.png") center right no-repeat;
