@@ -37,4 +37,4 @@ exclude:
   - sass
   - Gemfile
   - Gemfile.lock
-  # - README.md
+  - LICENSE
