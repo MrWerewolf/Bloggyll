@@ -33,11 +33,12 @@ Themes
 This is a list of known themes that derive from the base boilerplate theme.
 Let me know if you make a public theme and I'll add it to the list.
 
+* **[Shadow Play 1][shadow-play-1-src]** - based off the Shadow Play 1 design from [HTML5webtemplates.co.uk](http://www.html5webtemplates.co.uk).
 * **[War Room][war-room-src]** - Inspired by the interface to the
 ficticious game called *Global Thermonuclear War* from the 1983 film
 **WarGames**.
 
-
+[shadow-play-1-src]:https://github.com/MrWerewolf/Jekyll-Blog-Boilerplate/tree/Shadow-Play-1_Theme
 [war-room-src]:https://github.com/MrWerewolf/Jekyll-Blog-Boilerplate/tree/War-Room_Theme
 
 Getting started
