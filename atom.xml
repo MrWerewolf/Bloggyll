@@ -16,11 +16,24 @@ layout: nil
   {% endif %}
 
   {% for post in site.posts %}
+
+  {% assign categories = post.category %}
+  {% if categories == nil %}
+    {% assign categories = post.categories %}
+  {% endif %}
   <entry>
     <title>{{ post.title }}</title>
     <link href="{{ site.url }}{{ post.url | url_encode }}"/>
     <updated>{{ post.date | date_to_xmlschema }}</updated>
     <id>{{ site.url }}{{ post.id | url_encode }}</id>
+    {% if post.category %}
+      <category term="{{ post.category }}"/>
+    {% endif %}
+    {% if post.category == nil and post.categories.size > 0 %}
+      {% for category in post.categories %}
+      <category term="{{ category }}"/>
+      {% endfor %}
+    {% endif %}
     <content type="html">
       {{ post.content | xml_escape }}
     </content>
