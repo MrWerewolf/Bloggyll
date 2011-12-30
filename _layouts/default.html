@@ -1,8 +1,6 @@
 {% include head.html %}
 {% if page.sidebar != nil %}
   {% assign sidebar = page.sidebar %}
-{% else if post.sidebar != nil %}
-  {% assign sidebar = page.sidebar %}
 {% else %}
   {% assign sidebar = true %}
 {% endif %}
