@@ -172,12 +172,9 @@ a img {
  * Author:
  * ========================================================================== */
 /* ======
- *
  * Layout - defines the shape of the site.
- *
  * ====== */
 /* This makes the footer stick to the bottom.
- *
  * http://compass-style.org/reference/compass/layout/sticky_footer/ */
 html, body {
   height: 100%;
@@ -209,7 +206,6 @@ html, body {
 }
 
 /* Enable the Blueprint grid
- *
  * http://compass-style.org/reference/blueprint/grid/#mixin-container */
 #container {
   width: 950px;
@@ -217,7 +213,7 @@ html, body {
   overflow: hidden;
   *zoom: 1;
 }
-#container #header, #container #nav {
+#container #header, #container #nav, #container #main {
   padding-left: 40px;
   padding-right: 40px;
 }
@@ -236,47 +232,38 @@ html, body {
 }
 
 /* Two column layout.
- *
  * Use the pull method to make the sidebar appear on the right.
- *
  * Edit the $sidebar-columns value to adjust the width.
- *
  * http://compass-style.org/reference/blueprint/grid/#mixin-pull */
-.two-column #main {
+.two-column #container #main {
   display: inline;
   float: left;
   margin-right: 0;
   width: 630px;
-  padding-right: 40px;
   padding-left: 280px;
 }
-* html .two-column #main {
+* html .two-column #container #main {
   overflow-x: hidden;
 }
-.two-column #sidebar {
+.two-column #container #sidebar {
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 230px;
+  width: 190px;
   padding-left: 40px;
+  padding-right: 40px;
   display: inline;
   float: left;
   position: relative;
   margin-left: -950px;
 }
-* html .two-column #sidebar {
+* html .two-column #container #sidebar {
   overflow-x: hidden;
 }
 
 /* ======
- *
  * Header - display rules for the site name, tagline, and logo (if any).
- *
  * ====== */
-#header {
-  padding-top: 1.5em;
-  font-style: italic;
-}
 #header h1, #header h2 {
   font-family: "Warnock Pro", "Goudy Old Style", "Palatino", "Book Antiqua", Georgia, serif;
 }
@@ -287,10 +274,12 @@ html, body {
   color: lightgrey;
 }
 
+#logo {
+  float: right;
+}
+
 /* ====
- *
  * Menu
- *
  * ==== */
 #nav {
   margin-bottom: 1em;
@@ -306,7 +295,7 @@ html, body {
 #nav ul li {
   list-style-image: none;
   list-style-type: none;
-  margin-left: 0;
+  margin-left: 0px;
   display: -moz-inline-box;
   -moz-box-orient: vertical;
   display: inline-block;
@@ -380,15 +369,75 @@ html, body {
   color: white;
 }
 
+/* ====
+ * Form - applies blueprint style forms
+ * ==== */
+form label {
+  font-weight: bold;
+}
+form fieldset {
+  padding: 1.4em;
+  margin: 0 0 1.5em 0;
+}
+form legend {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+form input.text, form input.title, form input[type=email], form input[type=text], form input[type=password] {
+  margin: 0.5em 0;
+  background-color: white;
+  padding: 5px;
+}
+form input.title {
+  font-size: 1.5em;
+}
+form textarea {
+  margin: 0.5em 0;
+  padding: 5px;
+}
+form select {
+  margin: 0.5em 0;
+}
+form fieldset {
+  border: 1px solid #cccccc;
+}
+form input.text, form input.title, form input[type=email], form input[type=text], form input[type=password],
+form textarea {
+  background-color: #fff;
+  border: 1px solid #bbbbbb;
+}
+form input.text:focus, form input.title:focus, form input[type=email]:focus, form input[type=text]:focus, form input[type=password]:focus,
+form textarea:focus {
+  border-color: #666666;
+}
+form select {
+  background-color: #fff;
+  border-width: 1px;
+  border-style: solid;
+}
+form input.text, form input.title, form input[type=email], form input[type=text], form input[type=password] {
+  width: 300px;
+}
+form textarea {
+  width: 390px;
+  height: 250px;
+}
+
+/* =======
+ * Sidebar
+ * ======= */
+#sidebar {
+  /* Ensure input forms don't get cut off. */
+}
+#sidebar form input.text, #sidebar form input.title, #sidebar form input[type=email], #sidebar form input[type=text], #sidebar form input[type=password] {
+  width: auto;
+}
+
 /* ==========
- *
  * Typography - general rules for text display.
- *
  * ========== */
 /* Use Blueprint's typography
- *
  * You can override default variables in _base
- *
  * http://compass-style.org/reference/blueprint/typography/ */
 body {
   line-height: 1.5;
@@ -688,66 +737,8 @@ pre code {
   padding-bottom: 1px !important;
 }
 
-/* ====
- *
- * Form - applies blueprint style forms
- *
- * ==== */
-form label {
-  font-weight: bold;
-}
-form fieldset {
-  padding: 1.4em;
-  margin: 0 0 1.5em 0;
-}
-form legend {
-  font-weight: bold;
-  font-size: 1.2em;
-}
-form input.text, form input.title, form input[type=email], form input[type=text], form input[type=password] {
-  margin: 0.5em 0;
-  background-color: white;
-  padding: 5px;
-}
-form input.title {
-  font-size: 1.5em;
-}
-form textarea {
-  margin: 0.5em 0;
-  padding: 5px;
-}
-form select {
-  margin: 0.5em 0;
-}
-form fieldset {
-  border: 1px solid #cccccc;
-}
-form input.text, form input.title, form input[type=email], form input[type=text], form input[type=password],
-form textarea {
-  background-color: #fff;
-  border: 1px solid #bbbbbb;
-}
-form input.text:focus, form input.title:focus, form input[type=email]:focus, form input[type=text]:focus, form input[type=password]:focus,
-form textarea:focus {
-  border-color: #666666;
-}
-form select {
-  background-color: #fff;
-  border-width: 1px;
-  border-style: solid;
-}
-form input.text, form input.title, form input[type=email], form input[type=text], form input[type=password] {
-  width: 300px;
-}
-form textarea {
-  width: 390px;
-  height: 250px;
-}
-
 /* =============
- *
  * Post listings
- *
  * ============= */
 #archives section {
   display: inline;
@@ -799,7 +790,7 @@ form textarea {
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 590px;
+  width: 630px;
   display: inline;
   float: left;
   position: relative;
@@ -821,7 +812,7 @@ form textarea {
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 510px;
+  width: 550px;
   display: inline;
   float: left;
   position: relative;
@@ -850,7 +841,7 @@ ul.posts {
 ul.posts li {
   list-style-image: none;
   list-style-type: none;
-  margin-left: 0;
+  margin-left: 0px;
 }
 ul.posts time {
   color: #666666;
@@ -896,6 +887,11 @@ article.post header h1, article.post header h2, article.post header h3 {
   margin-bottom: -1px;
   font-weight: normal;
   color: #222222;
+  /* Ensure the article title doesn't jump around in size */
+  font-size: 2em;
+  min-height: 1.5em;
+  height: auto !important;
+  height: 1.5em;
 }
 article.post header a {
   text-decoration: none;
@@ -952,13 +948,11 @@ article.post.post-listing footer ul, article.post.post-listing footer ul li {
 article.post.post-listing footer ul li {
   list-style-image: none;
   list-style-type: none;
-  margin-left: 0;
+  margin-left: 0px;
 }
 
 /* ==========
- *
  * Pagination
- *
  * ========== */
 #pagination {
   -moz-border-radius-bottomleft: 10px;
@@ -988,7 +982,7 @@ article.post.post-listing footer ul li {
 #pagination li {
   list-style-image: none;
   list-style-type: none;
-  margin-left: 0;
+  margin-left: 0px;
   display: -moz-inline-box;
   -moz-box-orient: vertical;
   display: inline-block;
@@ -1015,11 +1009,8 @@ article.post.post-listing footer ul li {
 }
 
 /* ===
- *
  * Sprites with compass
- *
  * http://compass-style.org/help/tutorials/spriting/
- *
  * === */
 .icon-sprite, .icon-comment, .icon-doc, .icon-feed {
   background: url('/img/icon-s80c89e63f0.png') no-repeat;
@@ -1080,7 +1071,6 @@ span.icon-feed {
 }
 
 /* Right now I don't know if there's a good way to do with with
- *
  * the icon mechanism provided by Compass. */
 a.external.text-only {
   background: url("/img/external.png") center right no-repeat;
