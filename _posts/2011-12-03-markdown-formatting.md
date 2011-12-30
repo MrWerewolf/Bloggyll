@@ -77,6 +77,29 @@ normal
 
 -----
 
+**Automatic Link**
+
+<https://github.com/MrWerewolf/Jekyll-Blog-Boilerplate>
+
+**Inline Link**
+
+[About](/About)
+
+**Reference Link**
+
+[Jekyll Blog Boilerplate][ref-link]
+
+[ref-link]: https://github.com/MrWerewolf/Jekyll-Blog-Boilerplate
+
+
+**External links with no icon**
+
+[Jekyll Blog Boilerplate][ref-link]{:.noicon}
+
+<https://github.com/MrWerewolf/Jekyll-Blog-Boilerplate>{:.noicon}
+
+-----
+
 **Preformatted text**
 
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

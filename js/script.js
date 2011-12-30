@@ -1,7 +1,8 @@
 // Open a new tab for external links.
 $('a[href*="://"]').not('[href^="'+site.url+'"]')
   .attr('target', '_blank').addClass('external')
-  .not(':has(*)').addClass('text-only');
+  .not(':has(*)').addClass('text-only')
+  .not('.noicon').addClass('icon-external');
 
 $(window).load(function () {
   // Use relative url after everything is loaded. Allows us to test locally.
