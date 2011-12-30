@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Markdown Formatting
+sidebar: false
 categories:
     - Blog
     - Help

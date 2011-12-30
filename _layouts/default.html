@@ -1,5 +1,12 @@
 {% include head.html %}
-<body class="two-column">
+{% if page.sidebar != nil %}
+  {% assign sidebar = page.sidebar %}
+{% else if post.sidebar != nil %}
+  {% assign sidebar = page.sidebar %}
+{% else %}
+  {% assign sidebar = true %}
+{% endif %}
+<body {% if sidebar %}class="two-column"{% endif %}>
   <div id="root">
   <div id="container">
       <header id="header">
@@ -19,7 +26,9 @@
       <div id="main" role="main">
         {{ content }}
       </div>
+      {% if sidebar %}
       {% include sidebar.html %}
+      {% endif %}
 
     </div> <!--! end of #container -->
     <div id="root-footer"></div>
