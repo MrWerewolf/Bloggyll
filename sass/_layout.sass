@@ -18,7 +18,7 @@
  * http://compass-style.org/reference/blueprint/grid/#mixin-container
 #container
   +container
-  #header, #nav
+  #header, #nav, #main
     +prepend($column-pad)
     +append($column-pad)
   #main, #sidebar
@@ -37,11 +37,12 @@
  * Edit the $sidebar-columns value to adjust the width.
  * http://compass-style.org/reference/blueprint/grid/#mixin-pull
 .two-column
-  #main
-    +column($blueprint-grid-columns - $sidebar-columns - ($column-pad * 2), true)
-    +append($column-pad)
-    +prepend($sidebar-columns + $column-pad)
-  #sidebar
-    +column($sidebar-columns)
-    +prepend($column-pad)
-    +pull($blueprint-grid-columns, true)
+  #container
+    #main
+      +column($blueprint-grid-columns - $sidebar-columns - ($column-pad * 3), true)
+      +prepend($sidebar-columns + ($column-pad * 2))
+    #sidebar
+      +column($sidebar-columns)
+      +prepend($column-pad)
+      +append($column-pad)
+      +pull($blueprint-grid-columns, true)
