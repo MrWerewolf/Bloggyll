@@ -1,10 +1,7 @@
 ---
-layout: default
-title: About
+layout: page
+title: About the Jekyll Blog Boilerplate
 ---
-
-About the Jekyll Blog Boilerplate
----------------------------------
 
 The Jekyll Blog Boilerplate is a minimal [Jekyll][jekyll] theme utilizing
 [Compass][compass] and built from the [HTML5 Boilerplate][h5bp].  Many common
