@@ -172,9 +172,12 @@ a img {
  * Author:
  * ========================================================================== */
 /* ======
+ *
  * Layout - defines the shape of the site.
+ *
  * ====== */
 /* This makes the footer stick to the bottom.
+ *
  * http://compass-style.org/reference/compass/layout/sticky_footer/ */
 html, body {
   height: 100%;
@@ -206,6 +209,7 @@ html, body {
 }
 
 /* Enable the Blueprint grid
+ *
  * http://compass-style.org/reference/blueprint/grid/#mixin-container */
 #container {
   width: 950px;
@@ -232,8 +236,11 @@ html, body {
 }
 
 /* Two column layout.
+ *
  * Use the pull method to make the sidebar appear on the right.
+ *
  * Edit the $sidebar-columns value to adjust the width.
+ *
  * http://compass-style.org/reference/blueprint/grid/#mixin-pull */
 .two-column #container #main {
   display: inline;
@@ -262,7 +269,9 @@ html, body {
 }
 
 /* ======
+ *
  * Header - display rules for the site name, tagline, and logo (if any).
+ *
  * ====== */
 #header h1, #header h2 {
   font-family: "Warnock Pro", "Goudy Old Style", "Palatino", "Book Antiqua", Georgia, serif;
@@ -279,7 +288,9 @@ html, body {
 }
 
 /* ====
+ *
  * Menu
+ *
  * ==== */
 #nav {
   margin-bottom: 1em;
@@ -295,7 +306,7 @@ html, body {
 #nav ul li {
   list-style-image: none;
   list-style-type: none;
-  margin-left: 0px;
+  margin-left: 0;
   display: -moz-inline-box;
   -moz-box-orient: vertical;
   display: inline-block;
@@ -370,7 +381,9 @@ html, body {
 }
 
 /* ====
+ *
  * Form - applies blueprint style forms
+ *
  * ==== */
 form label {
   font-weight: bold;
@@ -424,7 +437,9 @@ form textarea {
 }
 
 /* =======
+ *
  * Sidebar
+ *
  * ======= */
 #sidebar {
   /* Ensure input forms don't get cut off. */
@@ -434,10 +449,14 @@ form textarea {
 }
 
 /* ==========
+ *
  * Typography - general rules for text display.
+ *
  * ========== */
 /* Use Blueprint's typography
+ *
  * You can override default variables in _base
+ *
  * http://compass-style.org/reference/blueprint/typography/ */
 body {
   line-height: 1.5;
@@ -738,7 +757,9 @@ pre code {
 }
 
 /* =============
+ *
  * Post listings
+ *
  * ============= */
 #archives section {
   display: inline;
@@ -841,7 +862,7 @@ ul.posts {
 ul.posts li {
   list-style-image: none;
   list-style-type: none;
-  margin-left: 0px;
+  margin-left: 0;
 }
 ul.posts time {
   color: #666666;
@@ -888,6 +909,7 @@ article.post header h1, article.post header h2, article.post header h3 {
   font-weight: normal;
   color: #222222;
   /* Ensure the article title doesn't jump around in size */
+  line-height: 1.5;
   font-size: 2em;
   min-height: 1.5em;
   height: auto !important;
@@ -948,11 +970,13 @@ article.post.post-listing footer ul, article.post.post-listing footer ul li {
 article.post.post-listing footer ul li {
   list-style-image: none;
   list-style-type: none;
-  margin-left: 0px;
+  margin-left: 0;
 }
 
 /* ==========
+ *
  * Pagination
+ *
  * ========== */
 #pagination {
   -moz-border-radius-bottomleft: 10px;
@@ -982,7 +1006,7 @@ article.post.post-listing footer ul li {
 #pagination li {
   list-style-image: none;
   list-style-type: none;
-  margin-left: 0px;
+  margin-left: 0;
   display: -moz-inline-box;
   -moz-box-orient: vertical;
   display: inline-block;
@@ -1009,8 +1033,11 @@ article.post.post-listing footer ul li {
 }
 
 /* ===
+ *
  * Sprites with compass
+ *
  * http://compass-style.org/help/tutorials/spriting/
+ *
  * === */
 .icon-sprite, .icon-comment, .icon-doc, .icon-feed {
   background: url('/img/icon-s80c89e63f0.png') no-repeat;
@@ -1071,6 +1098,7 @@ span.icon-feed {
 }
 
 /* Right now I don't know if there's a good way to do with with
+ *
  * the icon mechanism provided by Compass. */
 a.icon-external {
   background: url("/img/external.png") center right no-repeat;
