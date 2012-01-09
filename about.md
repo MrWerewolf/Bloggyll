@@ -3,6 +3,8 @@ layout: page
 title: About the Jekyll Blog Boilerplate
 ---
 
+![profile](/img/about/profile_m.gif){:.left}
+
 The Jekyll Blog Boilerplate is a minimal [Jekyll][jekyll] theme utilizing
 [Compass][compass] and built from the [HTML5 Boilerplate][h5bp].  Many common
 patterns found in Jekyll sites are implimented here to get you started with
