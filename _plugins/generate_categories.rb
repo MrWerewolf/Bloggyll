@@ -129,17 +129,26 @@ module Jekyll
     #
     # Returns string
     def category_links(categories)
-      createLink = lambda {
-        |cat| '<a href="/categories/'+URI.escape(cat)+'/">'+cat+'</a>'
-      }
+      site = @context.registers[:site]
+      dir = site.config['category_dir'] || 'categories'
+      uriparts = dir.split('/').map { |part| URI.escape(part) }
+      createLink = Proc.new do |cat|
+        case uriparts.length
+        when 0
+          url = '/' + URI.escape(cat)
+        else
+          url = '/' + uriparts.join('/') + '/' + URI.escape(cat)
+        end
 
+        '<a href="'+url+'">'+cat+'</a>'
+      end
+
+      # A single 'category' was specified
       if categories.is_a? String
         return createLink.call(categories)
       end
 
-      categories = categories.sort!.map do |item|
-        createLink.call(item)
-      end
+      categories = categories.sort!.map &createLink
 
       connector = "and"
       case categories.length
