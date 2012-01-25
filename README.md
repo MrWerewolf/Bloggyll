@@ -12,6 +12,8 @@ patterns found in Jekyll sites are implimented here to get you started with
 your own site in no time.  This theme is meant to be easy for you to add your
 own design, but this is optional.  All you have to do is provide your content.
 
+[![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=MrWerewolf&url=https://github.com/MrWerewolf/Jekyll-Blog-Boilerplate&title=Jekyll-Blog-Boilerplate&language=&tags=github&category=software)
+
 Features
 --------
 
