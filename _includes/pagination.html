@@ -1,12 +1,18 @@
 {% if paginator.total_pages > 1 %}
 <nav id="pagination">
   <ol>
+    {% capture baseurl %}/{{ page.url | remove_first:'/' | remove:'index.html' }}{% endcapture  %}
+    {% if paginator.page > 1 %}
+      {% capture pagenum %}page{{ paginator.page }}/{% endcapture %}
+      {% capture baseurl %}{{ baseurl | remove:pagenum }}{% endcapture %}
+    {% endif %}
+
     {% if paginator.previous_page > 1 %}
       {% capture page_url %}page{{ paginator.previous_page }}{% endcapture%}
     {% endif %}
     {% if paginator.previous_page %}
     <li>
-      <a href="/{{ page_url }}" title="Previous">
+      <a href="{{ baseurl }}{{ page_url }}" title="Previous">
         &laquo;
       </a>
     </li>
@@ -19,13 +25,13 @@
       {% if page == paginator.page %}
         {{ page }}
       {% else %}
-        <a href="/{{ page_url }}">{{ page }}</a>
+        <a href="{{ baseurl }}{{ page_url }}">{{ page }}</a>
       {% endif %}
     </li>
     {% endfor %}
     {% if paginator.next_page %}
     <li>
-      <a href="/page{{ paginator.next_page }}" title="Next">
+      <a href="{{ baseurl }}page{{ paginator.next_page }}" title="Next">
         &raquo;
       </a>
     </li>
