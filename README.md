@@ -3,16 +3,16 @@ layout: default
 
 ---
 
-Jekyll Blog Boilerplate
-=======================
+Bloggyll
+========
 
-The Jekyll Blog Boilerplate is a minimal [Jekyll][jekyll] theme utilizing
-[Compass][compass] and built from the [HTML5 Boilerplate][h5bp].  Many common
-patterns found in Jekyll sites are implimented here to get you started with
-your own site in no time.  This theme is meant to be easy for you to add your
-own design, but this is optional.  All you have to do is provide your content.
+Bloggyll is a minimal [Jekyll][jekyll] theme utilizing [Compass][compass] and
+built from the [HTML5 Boilerplate][h5bp].  Many common patterns found in Jekyll
+sites are implimented here to get you started with your own site in no time.
+This theme is meant to be easy for you to add your own design, but this is
+optional.  All you have to do is provide your content.
 
-[![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=MrWerewolf&url=https://github.com/MrWerewolf/Jekyll-Blog-Boilerplate&title=Jekyll-Blog-Boilerplate&language=&tags=github&category=software)
+[![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=MrWerewolf&url=https://github.com/MrWerewolf/Bloggyll&title=Bloggyll&language=&tags=github&category=software)
 
 Features
 --------
@@ -41,17 +41,17 @@ Let me know if you make a public theme and I'll add it to the list.
 ficticious game called *Global Thermonuclear War* from the 1983 film
 **WarGames**.
 
-[bauble-src]:https://github.com/MrWerewolf/Jekyll-Blog-Boilerplate/tree/Bauble_Theme
-[shadow-play-1-src]:https://github.com/MrWerewolf/Jekyll-Blog-Boilerplate/tree/Shadow-Play-1_Theme
-[war-room-src]:https://github.com/MrWerewolf/Jekyll-Blog-Boilerplate/tree/War-Room_Theme
+[bauble-src]:https://github.com/MrWerewolf/Bloggyll/tree/Bauble_Theme
+[shadow-play-1-src]:https://github.com/MrWerewolf/Bloggyll/tree/Shadow-Play-1_Theme
+[war-room-src]:https://github.com/MrWerewolf/Bloggyll/tree/War-Room_Theme
 
 Getting started
 ---------------
 
-Using the Jekyll Blog Boilerplate is relatively simple.  In these instructions
-I refer to the Jekyll Blog Boilerplate as the **template**.  Also, I assume
-you have a command line interface or terminal open in the directory where you
-have placed your copy of the template.
+Using Bloggyll is relatively simple.  In these instructions I refer to the
+Bloggyll as the **template**.  Also, I assume you have a command line interface
+or terminal open in the directory where you have placed your copy of the
+template.
 
 ### Installing
 
@@ -75,10 +75,9 @@ This will install any gems that this template depends on.
 ### Installing with RVM
 
 If you're a Linux or Mac OS X user, you can use [RVM][rvm] to manage your Ruby
-environments.  The Jekyll Blog Boilerplate comes with an `.rvmrc` that
-automatically sets up an isolated environment for itself.  All you need to do
-is open a terminal window and change your directory to where you have placed
-the template.
+environments.  Bloggyll comes with an `.rvmrc` that automatically sets up an
+isolated environment for itself.  All you need to do is open a terminal window
+and change your directory to where you have placed the template.
 
 ### Viewing the site
 
@@ -161,7 +160,7 @@ simple like:
     ---
 
     It's the new year!  My new year's resolution is to blog with the Jekyll
-    using the Jekyll Blog Boilerplate theme.
+    using Bloggyll for my website.
 
 Now that your post is created, run `jekyll --serve --auto` and view your site
 at `http://localhost:4000/`.  You should find your post on the front page and
@@ -216,8 +215,8 @@ deployment][jekyll-deploy].
 Styling
 -------
 
-The Jekyll Blog Boilerplate uses **Sass** and **Compass** to generate it's
-CSS.  ***Do not*** edit the `css/style.css` file directly.
+Bloggyll uses **Sass** and **Compass** to generate it's CSS.  ***Do not*** edit
+the `css/style.css` file directly.
 
 **Sass** is a stylesheet that gets converted to CSS.  Sass adds features that
 make styles easier to maintain and develop.  If you are new to working with
@@ -256,7 +255,7 @@ project's github page][jekyll-boiler].
 
 This project is intended to be forked to create new themes.
 
-[jekyll-boiler]: https://github.com/MrWerewolf/Jekyll-Blog-Boilerplate
+[jekyll-boiler]: https://github.com/MrWerewolf/Bloggyll
 [jekyll]: http://jekyllrb.com/
 [jekyll-install]: https://github.com/mojombo/jekyll/wiki/install
 [jekyll-conf]: https://github.com/mojombo/jekyll/wiki/Configuration

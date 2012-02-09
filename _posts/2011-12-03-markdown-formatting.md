@@ -79,7 +79,7 @@ normal
 
 **Automatic Link**
 
-<https://github.com/MrWerewolf/Jekyll-Blog-Boilerplate>
+<https://github.com/MrWerewolf/Bloggyll>
 
 **Inline Link**
 
@@ -87,16 +87,16 @@ normal
 
 **Reference Link**
 
-[Jekyll Blog Boilerplate][ref-link]
+[Bloggyll][ref-link]
 
-[ref-link]: https://github.com/MrWerewolf/Jekyll-Blog-Boilerplate
+[ref-link]: https://github.com/MrWerewolf/Bloggyll
 
 
 **External links with no icon**
 
-[Jekyll Blog Boilerplate][ref-link]{:.noicon}
+[Bloggyll][ref-link]{:.noicon}
 
-<https://github.com/MrWerewolf/Jekyll-Blog-Boilerplate>{:.noicon}
+<https://github.com/MrWerewolf/Bloggyll>{:.noicon}
 
 -----
 

@@ -5,13 +5,15 @@
 # You can also add more variables to be made available throughout your site.
 
 url: http://jekyll.net          # Full public url without trailing slash
-name: Jekyll Blog Boilerplate   # Site name/title
+name: Bloggyll                  # Site name/title
 tagline: A humble blog theme.   # Site tagline/subtitle
 author: Mr. Hyde                # Site author
 email: mr.hyde@jekyll.net       # Site author's email
 
 #ga: UA-XXXXX-X                 # Google Analytics ID
 #disqus: xxxxxxxxx              # Disqus shortname
+
+#category_dir: /
 
 ###################
 # Jekyll Settings #
