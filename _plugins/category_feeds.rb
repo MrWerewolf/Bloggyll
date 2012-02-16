@@ -1,3 +1,13 @@
+# encoding: utf-8
+#
+# Jekyll category feeds.
+# https://github.com/MrWerewolf/jekyll-category-pagination
+#
+# Copyright (c) 2012 Ryan Seto <mr.werewolf@gmail.com>
+# Licensed under the MIT license (http://www.opensource.org/licenses/mit-license.php)
+#
+# Place this script into the _plugins directory of your Jekyll site.
+#
 require 'atom/feed'
 require 'uri'
 
@@ -5,12 +15,13 @@ module Jekyll
 
   # Represents a feed to be generated.
   class FeedFile < StaticFile
-    def initialize(site, base, dir, name, posts)
+    def initialize(site, base, dir, name, posts, category = nil)
       @site = site
       @base = base
       @dir  = dir
       @name = name
       @posts = posts
+      @category = category
     end
 
     def url
@@ -40,6 +51,7 @@ module Jekyll
       feed = Atom::Feed.new self.url
       feed.id = @site.config['url']
       feed.title = @site.config['name']
+      feed.title = "#{feed.title} >> #{@category}" if @category
       feed.subtitle = @site.config['tagline'] if @site.config['tagline']
       feed.updated = Time.now
 
@@ -104,7 +116,8 @@ module Jekyll
             site, site.dest,
             File.join(feed_dir, category),
             'atom.xml',
-            pages)
+            pages,
+            category)
       end
     end
   end
