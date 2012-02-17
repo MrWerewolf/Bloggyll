@@ -1,0 +1,34 @@
+---
+title: Feeds
+layout: page
+---
+
+{% if site.feed_dir %}
+{% assign feed_dir = site.feed_dir %}
+{% else %}
+{% assign feed_dir = 'feeds' %}
+{% endif %}
+
+<div id="feeds">
+  <p>
+  <strong>
+    <span class="icon-feed"></span>
+    <a href="/{{feed_dir}}/atom.xml">All posts ({{ site.posts.size }})</a>
+  </strong>
+  </p>
+
+  <ul id="categories">
+
+    {% for category in site.sorted_categories %}
+    {% assign name  = category[0] %}
+    {% assign posts  = category[1] %}
+    {% capture feed_url %}/{{feed_dir}}/{{name}}/atom.xml{% endcapture %}
+
+    <li>
+      <span class="icon-feed"></span>
+      <a href="{{feed_url}}">{{name}} ({{ posts.size }})</a>
+    </li>
+
+    {% endfor %}
+  </ul>
+</div>
