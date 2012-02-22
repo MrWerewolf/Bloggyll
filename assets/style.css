@@ -163,11 +163,14 @@ a img {
 }
 
 /* Using the base theme.
- * Other themes need to override this. */
+ * Override this in your theme-base. */
+/* Base theme settings, variables, and colors.
+ * Override these in your theme-base. */
 /* Variables */
 /* Site Header */
 /* Top nav menu */
 /* Code */
+/* Webkit-scrollbar colors */
 /* Mixins */
 /* =============================================================================
  * Primary styles

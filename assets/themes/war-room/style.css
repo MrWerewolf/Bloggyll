@@ -173,11 +173,24 @@ a img {
 /* Webkit-scrollbar colors */
 /* Theme name/directory */
 /* Variables */
-/* Shadow Play Colors */
+/* Orbitron font. */
+@font-face {
+  font-family: "OrbitronBold";
+  src: url(/font/orbitron/orbitron-bold-webfont.eot);
+  src: url(/font/orbitron/orbitron-bold-webfont.eot?iefix) format('eot'), url(/assets/themes/war-room/font/orbitron/orbitron-bold-webfont.woff) format('woff'), url(/font/orbitron/orbitron-bold-webfont.ttf) format('truetype'), url(/font/orbitron/orbitron-bold-webfont.svg) format('svg');
+}
+
+/* War-Room Theme specific colors */
+/* Colors (Using Solarized pallet) */
+/* Solarized palette [http://ethanschoonover.com/solarized] */
+/* Dark Background Tones */
+/* Content Tones */
+/* Light Background Tones */
+/* Accent Colors */
 /* Site Header */
 /* Top nav menu */
-/* Default font */
-/* Serif font */
+/* Code */
+/* Webkit-scrollbar colors */
 /* Mixins */
 /* ======
  * Layout - defines the shape of the site.
@@ -193,16 +206,16 @@ html, body {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin-bottom: -60px;
+  margin-bottom: -36px;
 }
 #root #root_footer {
-  height: 60px;
+  height: 36px;
 }
 
 #footer {
   clear: both;
   position: relative;
-  height: 60px;
+  height: 36px;
 }
 
 /* Center the footer. */
@@ -236,15 +249,19 @@ html, body {
 
 /* Prevent the content from smashing into the footer. */
 #root-footer {
-  height: 84px;
+  height: 60px;
 }
 
 /* Two column layout. */
+/* Use the pull method to make the sidebar appear on the right.
+ * Edit the $sidebar-columns value to adjust the width.
+ * http://compass-style.org/reference/blueprint/grid/#mixin-pull */
 .two-column #container #main {
   display: inline;
   float: left;
-  margin-right: 10px;
+  margin-right: 0;
   width: 630px;
+  padding-left: 280px;
 }
 * html .two-column #container #main {
   overflow-x: hidden;
@@ -252,9 +269,14 @@ html, body {
 .two-column #container #sidebar {
   display: inline;
   float: left;
-  margin-right: 0;
+  margin-right: 10px;
   width: 190px;
+  padding-left: 40px;
   padding-right: 40px;
+  display: inline;
+  float: left;
+  position: relative;
+  margin-left: -950px;
 }
 * html .two-column #container #sidebar {
   overflow-x: hidden;
@@ -264,13 +286,13 @@ html, body {
  * Header - display rules for the site name, tagline, and logo (if any).
  * ====== */
 #header h1, #header h2 {
-  font-family: "century gothic", arial, sans-serif;
+  font-family: "OrbitronBold", sans-serif;
 }
 #header h1, #header h1 a {
-  color: #a4aa04;
+  color: #2aa198;
 }
 #header h2, #header h2 a {
-  color: #bbbbbb;
+  color: #859900;
 }
 
 #logo {
@@ -289,7 +311,7 @@ html, body {
   border: 0;
   overflow: hidden;
   *zoom: 1;
-  border-bottom: 1px solid #ccc6b4;
+  border-bottom: 1px solid #073642;
 }
 #nav ul li {
   list-style-image: none;
@@ -337,9 +359,9 @@ html, body {
   margin-left: 0;
   margin-bottom: -1px;
   margin-right: 0;
-  background-color: none;
-  border-color: none#101010 none none none#101010;
-  color: white;
+  background-color: #002b36;
+  border-color: #174652 #073642 #073642 #174652;
+  color: #2aa198;
 }
 #nav a {
   *display: inline;
@@ -353,19 +375,19 @@ html, body {
   float: none;
 }
 #nav a:hover {
-  background-color: none;
-  border-color: none#101010 none none none#101010;
-  color: #a4aa04;
+  background-color: #073642;
+  border-color: #174652 #073642 #073642 #174652;
+  color: #cb4b16;
 }
 #nav a:active {
-  background-color: none;
-  border-color: none#101010 none none none#101010;
-  color: white;
+  background-color: #073642;
+  border-color: #687e85 #586e75 #586e75 #687e85;
+  color: #859900;
 }
 #nav a.selected {
-  background-color: none;
-  border-color: none#101010 none none none#101010;
-  color: white;
+  background-color: #073642;
+  border-color: #687e85 #586e75 #586e75 #687e85;
+  color: #859900;
 }
 
 /* ====
@@ -440,14 +462,14 @@ form textarea {
  * http://compass-style.org/reference/blueprint/typography/ */
 body {
   line-height: 1.5;
-  font-family: "lucida sans", arial, sans-serif;
-  color: #635b53;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  color: #839496;
   font-size: 75%;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
-  color: #342f28;
+  color: #93a1a1;
 }
 h1 img, h2 img, h3 img, h4 img, h5 img, h6 img {
   margin: 0;
@@ -505,16 +527,16 @@ p .right {
 
 a {
   text-decoration: underline;
-  color: #635b53;
+  color: #2aa198;
 }
 a:visited {
-  color: #635b53;
+  color: #2aa198;
 }
 a:focus {
-  color: #a4aa04;
+  color: #859900;
 }
 a:hover {
-  color: #a4aa04;
+  color: #859900;
 }
 a:active {
   color: #bf00ff;
@@ -522,7 +544,7 @@ a:active {
 
 blockquote {
   margin: 1.5em;
-  color: #a8aa94;
+  color: #cb4b16;
   font-style: italic;
 }
 
@@ -548,7 +570,7 @@ address {
 }
 
 del {
-  color: #a8aa94;
+  color: #cb4b16;
 }
 
 pre {
@@ -599,7 +621,7 @@ th {
 }
 
 thead th {
-  background: #3b3b3b;
+  background: #002b36;
 }
 
 th, td, caption {
@@ -616,15 +638,15 @@ tfoot {
 }
 
 caption {
-  background: #f6f4f0;
+  background: black;
 }
 
 .quiet {
-  color: #666666;
+  color: #586e75;
 }
 
 .loud {
-  color: #111111;
+  color: #eee8d5;
 }
 
 #footer a, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -636,22 +658,22 @@ caption {
 
 #footer {
   /* You can set the $alternate-text-font in _base. */
-  color: #a8aa94;
+  color: #cb4b16;
   font-family: "Warnock Pro", "Goudy Old Style", "Palatino", "Book Antiqua", Georgia, serif;
   font-style: italic;
   font-weight: normal;
 }
 
 hr {
-  color: #635b53;
-  background-color: #635b53;
-  border-color: #ccc6b4;
+  color: #839496;
+  background-color: #839496;
+  border-color: #073642;
   height: 1px;
 }
 
 /* github-like code tags and pre tags */
 pre, code {
-  color: #444444;
+  color: #93a1a1;
 }
 
 code {
@@ -661,8 +683,8 @@ code {
   -ms-border-radius: 2px;
   -khtml-border-radius: 2px;
   border-radius: 2px;
-  background-color: #eeeeee;
-  border: 1px solid #dddddd;
+  background-color: #002b36;
+  border: 1px solid #073642;
   padding: 0.1em;
 }
 
@@ -674,8 +696,8 @@ pre {
   -khtml-border-radius: 5px;
   border-radius: 5px;
   overflow: auto;
-  background-color: #eeeeee;
-  border: 1px solid #dddddd;
+  background-color: #002b36;
+  border: 1px solid #073642;
   margin: 1em 0;
   padding: 5px;
 }
@@ -685,7 +707,7 @@ pre::-webkit-scrollbar {
 }
 pre::-webkit-scrollbar-track-piece {
   margin-bottom: 10px;
-  background-color: #e5e5e5;
+  background-color: #93a1a1;
   border-bottom-left-radius: 4px 4px;
   border-bottom-right-radius: 4px 4px;
   border-top-left-radius: 4px 4px;
@@ -693,13 +715,13 @@ pre::-webkit-scrollbar-track-piece {
 }
 pre::-webkit-scrollbar-thumb:vertical {
   height: 25px;
-  background-color: #cccccc;
+  background-color: #586e75;
   -webkit-border-radius: 4px;
   -webkit-box-shadow: 0 1px 1px white;
 }
 pre::-webkit-scrollbar-thumb:horizontal {
   width: 25px;
-  background-color: #cccccc;
+  background-color: #586e75;
   -webkit-border-radius: 4px;
 }
 pre code {
@@ -714,7 +736,7 @@ pre code {
 }
 .syntaxhighlighter::-webkit-scrollbar-track-piece {
   margin-bottom: 10px;
-  background-color: #e5e5e5;
+  background-color: #93a1a1;
   border-bottom-left-radius: 4px 4px;
   border-bottom-right-radius: 4px 4px;
   border-top-left-radius: 4px 4px;
@@ -722,13 +744,13 @@ pre code {
 }
 .syntaxhighlighter::-webkit-scrollbar-thumb:vertical {
   height: 25px;
-  background-color: #cccccc;
+  background-color: #586e75;
   -webkit-border-radius: 4px;
   -webkit-box-shadow: 0 1px 1px white;
 }
 .syntaxhighlighter::-webkit-scrollbar-thumb:horizontal {
   width: 25px;
-  background-color: #cccccc;
+  background-color: #586e75;
   -webkit-border-radius: 4px;
 }
 .syntaxhighlighter .container {
@@ -757,7 +779,7 @@ pre code {
   float: left;
   position: relative;
   margin-left: -120px;
-  color: #666666;
+  color: #586e75;
   margin-top: 0.1em;
   font-size: 150%;
 }
@@ -780,7 +802,7 @@ pre code {
   float: left;
   position: relative;
   margin-left: -200px;
-  color: #666666;
+  color: #586e75;
   margin-top: 0.1em;
   font-size: 150%;
 }
@@ -803,7 +825,7 @@ pre code {
   float: left;
   position: relative;
   margin-left: -120px;
-  color: #666666;
+  color: #586e75;
   margin-top: 0.1em;
   font-size: 150%;
 }
@@ -825,7 +847,7 @@ pre code {
   float: left;
   position: relative;
   margin-left: -200px;
-  color: #666666;
+  color: #586e75;
   margin-top: 0.1em;
   font-size: 150%;
 }
@@ -843,7 +865,7 @@ ul.posts li {
   margin-left: 0;
 }
 ul.posts time {
-  color: #666666;
+  color: #586e75;
 }
 ul.posts a.post {
   font-weight: bold;
@@ -868,11 +890,11 @@ ul.posts a.post {
   font-size: 70%;
   line-height: 70%;
   margin-left: 1em;
-  color: #666666;
+  color: #586e75;
 }
 #tags aside.tags a {
   text-decoration: none;
-  color: #666666;
+  color: #586e75;
 }
 #tags aside.tags a:hover {
   text-decoration: underline;
@@ -886,10 +908,10 @@ article.post header {
   margin-bottom: 0.5em;
 }
 article.post header h1, article.post header h2, article.post header h3 {
-  border-bottom: 1px solid #ccc6b4;
+  border-bottom: 1px solid #073642;
   margin-bottom: -1px;
   font-weight: normal;
-  color: #342f28;
+  color: #93a1a1;
   /* Ensure the article title doesn't jump around in size */
   line-height: 1.5;
   font-size: 2em;
@@ -904,7 +926,7 @@ article.post header a:hover {
   text-decoration: underline;
 }
 article.post header p {
-  color: #666666;
+  color: #586e75;
   display: -moz-inline-box;
   -moz-box-orient: vertical;
   display: inline-block;
@@ -922,9 +944,9 @@ article.post header p {
   -ms-border-bottom-right-radius: 10px;
   -khtml-border-bottom-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  border-bottom: 1px solid #ccc6b4;
-  border-left: 1px solid #ccc6b4;
-  border-right: 1px solid #ccc6b4;
+  border-bottom: 1px solid #073642;
+  border-left: 1px solid #073642;
+  border-right: 1px solid #073642;
   margin: 0;
   padding-left: 5px;
   padding-right: 5px;
@@ -933,7 +955,7 @@ article.post header p {
   *display: inline;
 }
 article.post.post-listing footer {
-  border-top: 1px dashed #ccc6b4;
+  border-top: 1px dashed #073642;
   padding-top: 0.4em;
   padding-bottom: 0.8em;
   width: 35%;
@@ -978,7 +1000,7 @@ article.post.post-listing footer ul li {
   *zoom: 1;
   margin-top: 1em;
   padding: 5px;
-  border: 1px solid #ccc6b4;
+  border: 1px solid #073642;
   text-align: center;
   font-size: 125%;
   font-weight: bold;
@@ -1077,7 +1099,7 @@ span.icon-feed {
 /* Right now I don't know if there's a good way to do with with
  * the icon mechanism provided by Compass. */
 a.icon-external {
-  background: url("/assets/themes/shadow-play/img/external.png") center right no-repeat;
+  background: url("/assets/themes/war-room/img/external.png") center right no-repeat;
   padding-right: 13px;
 }
 
@@ -1293,32 +1315,32 @@ a.icon-external {
 }
 
 .syntaxhighlighter {
-  background-color: white !important;
+  background-color: #0f192a !important;
 }
 .syntaxhighlighter .line.alt1 {
-  background-color: white !important;
+  background-color: #0f192a !important;
 }
 .syntaxhighlighter .line.alt2 {
-  background-color: white !important;
+  background-color: #0f192a !important;
 }
 .syntaxhighlighter .line.highlighted.alt1, .syntaxhighlighter .line.highlighted.alt2 {
-  background-color: #e0e0e0 !important;
+  background-color: #253e5a !important;
 }
 .syntaxhighlighter .line.highlighted.number {
-  color: black !important;
+  color: #38566f !important;
 }
 .syntaxhighlighter table caption {
-  color: black !important;
+  color: #d1edff !important;
 }
 .syntaxhighlighter .gutter {
   color: #afafaf !important;
 }
 .syntaxhighlighter .gutter .line {
-  border-right: 3px solid #6ce26c !important;
+  border-right: 3px solid #435a5f !important;
 }
 .syntaxhighlighter .gutter .line.highlighted {
-  background-color: #6ce26c !important;
-  color: white !important;
+  background-color: #435a5f !important;
+  color: #0f192a !important;
 }
 .syntaxhighlighter.printing .line .content {
   border: none !important;
@@ -1327,178 +1349,132 @@ a.icon-external {
   overflow: visible !important;
 }
 .syntaxhighlighter.collapsed .toolbar {
-  color: blue !important;
-  background: white !important;
-  border: 1px solid #6ce26c !important;
+  color: #428bdd !important;
+  background: black !important;
+  border: 1px solid #435a5f !important;
 }
 .syntaxhighlighter.collapsed .toolbar a {
-  color: blue !important;
+  color: #428bdd !important;
 }
 .syntaxhighlighter.collapsed .toolbar a:hover {
-  color: red !important;
+  color: #1dc116 !important;
 }
 .syntaxhighlighter .toolbar {
-  color: white !important;
-  background: #6ce26c !important;
+  color: #d1edff !important;
+  background: #435a5f !important;
   border: none !important;
 }
 .syntaxhighlighter .toolbar a {
-  color: white !important;
+  color: #d1edff !important;
 }
 .syntaxhighlighter .toolbar a:hover {
-  color: black !important;
+  color: #8aa6c1 !important;
 }
 .syntaxhighlighter .plain, .syntaxhighlighter .plain a {
-  color: black !important;
+  color: #d1edff !important;
 }
 .syntaxhighlighter .comments, .syntaxhighlighter .comments a {
-  color: #008200 !important;
+  color: #428bdd !important;
 }
 .syntaxhighlighter .string, .syntaxhighlighter .string a {
-  color: blue !important;
+  color: #1dc116 !important;
 }
 .syntaxhighlighter .keyword {
-  color: #006699 !important;
+  color: #b43d3d !important;
 }
 .syntaxhighlighter .preprocessor {
-  color: gray !important;
+  color: #8aa6c1 !important;
 }
 .syntaxhighlighter .variable {
-  color: #aa7700 !important;
+  color: #ffaa3e !important;
 }
 .syntaxhighlighter .value {
-  color: #009900 !important;
+  color: #f7e741 !important;
 }
 .syntaxhighlighter .functions {
-  color: #ff1493 !important;
+  color: #ffaa3e !important;
 }
 .syntaxhighlighter .constants {
-  color: #0066cc !important;
+  color: #e0e8ff !important;
 }
 .syntaxhighlighter .script {
   font-weight: bold !important;
-  color: #006699 !important;
+  color: #b43d3d !important;
   background-color: none !important;
 }
 .syntaxhighlighter .color1, .syntaxhighlighter .color1 a {
-  color: gray !important;
+  color: #f8bb00 !important;
 }
 .syntaxhighlighter .color2, .syntaxhighlighter .color2 a {
-  color: #ff1493 !important;
+  color: white !important;
 }
 .syntaxhighlighter .color3, .syntaxhighlighter .color3 a {
-  color: red !important;
+  color: #ffaa3e !important;
 }
 
-.syntaxhighlighter .keyword {
-  font-weight: bold !important;
+/* ==============
+ * War-Room Theme - Contains specific rules for the theme
+ * ============== */
+#world {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
-/* Style based off the Shadow Play 1 design from HTML5webtemplates.co.uk */
-body, #container {
-  background-image: url("/assets/themes/shadow-play/img/back.png");
-  background-repeat: repeat-x;
-  background-color: #f6f4f0;
-}
-
-#logo {
-  display: block;
-  width: 549px;
-  height: 127px;
-  background-image: url("/assets/themes/shadow-play/img/logo.png");
+body {
+  background-image: url("/assets/themes/war-room/img/world.png");
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  -moz-background-size: 100%, 100%;
+  -webkit-background-size: 100%, 100%;
+  -o-background-size: 100%, 100%;
+  background-size: 100%, 100%;
+  background-color: black;
+}
+
+#container, #footer {
+  background-color: black;
 }
 
 #header {
-  height: 127px;
-}
-#header h1, #header h2 {
-  line-height: normal;
-  margin: 0;
-}
-#header h1 {
-  font-size: 300%;
-  padding-top: 22px;
-  letter-spacing: 0.1em;
-}
-#header h2 {
-  font-size: 120%;
-  padding-top: 4px;
+  padding-top: 1.5em;
 }
 
-#nav {
-  height: 46px;
-  text-align: right;
-}
-#nav ul {
-  height: inherit;
-  border: none;
-}
-#nav li {
-  height: 31px;
-  margin-top: 13px;
-}
-#nav li a {
-  font-family: "Palatino Linotype", Palatino, Georgia, serif;
-  font-size: 100%;
-  letter-spacing: 0.1em;
-  border: none;
-  height: 20px;
-  padding-left: 22px;
-  padding-right: 22px;
-  padding-bottom: 4px;
-  padding-top: 7px;
-}
-#nav li a.selected, #nav li a.selected:hover {
-  background-image: url("/assets/themes/shadow-play/img/tabs.png");
-  background-repeat: no-repeat;
-}
-
-/* Dotted underline links */
-a {
-  text-decoration: none;
-  border-bottom: 1px dotted;
-}
-a:hover {
-  text-decoration: underline;
-}
-a:hover {
-  border-bottom: none;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Palatino Linotype", Palatino, Georgia, serif;
-}
-h1 a, h1 a:visited, h2 a, h2 a:visited, h3 a, h3 a:visited, h4 a, h4 a:visited, h5 a, h5 a:visited, h6 a, h6 a:visited {
-  /* Preserve header color */
-  color: #342f28;
-  /* Cancel dotted underline. */
-  border-bottom: none;
-}
-
-#sidebar {
-  line-height: 1.5;
-}
-#sidebar h3 {
-  font-size: 2em;
-  padding-bottom: 0.5em;
-  margin-bottom: 0.5em;
-  border-bottom: 1px solid #ccc6b4;
+#container {
+  border: 3px solid #198026;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -o-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  border-radius: 10px;
+  margin-top: 24px;
 }
 
 #footer {
-  background: #313131;
-  width: auto;
-  height: 46px;
-  padding-top: 10px;
-  border-top: 4px solid #a4aa04;
-  font-style: normal;
+  height: 24px;
+  padding-top: 9px;
+  border: 3px solid #198026;
+  border-bottom: none;
+  -moz-border-radius-topleft: 10px;
+  -webkit-border-top-left-radius: 10px;
+  -o-border-top-left-radius: 10px;
+  -ms-border-top-left-radius: 10px;
+  -khtml-border-top-left-radius: 10px;
+  border-top-left-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  -webkit-border-top-right-radius: 10px;
+  -o-border-top-right-radius: 10px;
+  -ms-border-top-right-radius: 10px;
+  -khtml-border-top-right-radius: 10px;
+  border-top-right-radius: 10px;
 }
-#footer a {
-  color: #a8aa94;
-}
-#footer a:hover {
-  color: white;
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "OrbitronBold", "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 
 /* These partials come from the HTML5 Boilerplate */

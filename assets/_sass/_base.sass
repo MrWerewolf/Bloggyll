@@ -10,6 +10,7 @@
 @import "blueprint/reset"
 @import "compass"
 @import "compass/layout"
+@import "compass/css3"
 @import "blueprint"
 @import "blueprint/fancy-type"
 @import "blueprint/buttons"
@@ -18,8 +19,11 @@
 +blueprint-interaction
 
 /* Using the base theme.
- * Other themes need to override this.
+ * Override this in your theme-base.
 $theme: base
+
+/* Base theme settings, variables, and colors.
+ * Override these in your theme-base.
 
 /* Variables
 $sidebar-orientation: left
@@ -48,25 +52,6 @@ $code-text-color: #444
 $code-background-color: #EEE
 $code-border-color: #DDD
 
-
-/* Mixins
-=webkit-scrollbar
-  &::-webkit-scrollbar
-    height: 8px
-    width: 8px
-  &::-webkit-scrollbar-track-piece
-    margin-bottom: 10px
-    background-color: #E5E5E5
-    border-bottom-left-radius: 4px 4px
-    border-bottom-right-radius: 4px 4px
-    border-top-left-radius: 4px 4px
-    border-top-right-radius: 4px 4px
-  &::-webkit-scrollbar-thumb:vertical
-    height: 25px
-    background-color: #ccc
-    -webkit-border-radius: 4px
-    -webkit-box-shadow: 0 1px 1px rgba(255,255,255,1)
-  &::-webkit-scrollbar-thumb:horizontal
-    width: 25px
-    background-color: #ccc
-    -webkit-border-radius: 4px
+/* Webkit-scrollbar colors
+$webkit-scrollbar-track-piece-bg: #E5E5E5
+$webkit-scrollbar-thumb-bg: #ccc
