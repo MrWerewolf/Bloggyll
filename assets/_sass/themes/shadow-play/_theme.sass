@@ -1,0 +1,90 @@
+/* Style based off the Shadow Play 1 design from HTML5webtemplates.co.uk
+
+body, #container
+  background:
+    image: url('/assets/themes/shadow-play/img/back.png')
+    repeat: repeat-x
+    color: $blueprint-background-color
+
+#logo
+  display: block
+  width: 549px
+  height: 127px
+  background:
+    image: url('/assets/themes/shadow-play/img/logo.png')
+    repeat: none
+
+#header
+  height: 127px
+  h1, h2
+    line-height: normal
+    margin: 0
+  h1
+    font-size: 300%
+    padding-top: 22px
+    letter-spacing: 0.1em
+  h2
+    font-size: 120%
+    padding-top: 4px
+
+#nav
+  height: 46px
+  text-align: right
+  ul
+    height: inherit
+    border: none
+  li
+    height: 31px
+    margin:
+      top: 13px
+    a
+      font-family: $serif-font
+      font-size: 100%
+      letter-spacing: 0.1em
+      border: none
+      height: 20px
+      padding:
+        left: 22px
+        right: 22px
+        bottom: 4px
+        top: 7px
+      &.selected, &.selected:hover
+        background:
+          image: url('/assets/themes/shadow-play/img/tabs.png')
+          repeat: no-repeat
+
+/* Dotted underline links
+a
+  +hover-link
+  border-bottom: 1px dotted
+  &:hover
+    border-bottom: none
+
+h1, h2, h3, h4, h5, h6
+  font-family: $serif-font
+  a, a:visited
+    /* Preserve header color
+    color: $header-color
+    /* Cancel dotted underline.
+    border-bottom: none
+
+#sidebar
+  line-height: 1.5
+  h3
+    font-size: 2em
+    padding-bottom: 0.5em
+    margin-bottom: 0.5em
+    border-bottom: 1px solid $blueprint-border-color
+
+#footer
+  background: #313131
+  width: auto
+  height: $footer-height - 10px - 4px
+  padding-top: 10px
+  border-top: 4px solid $shadowplay-highlight
+  font-style: normal
+  a
+    color: $alt-text-color
+
+    &:hover
+      color: white
