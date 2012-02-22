@@ -1018,7 +1018,7 @@ article.post.post-listing footer ul li {
  * http://compass-style.org/help/tutorials/spriting/
  * === */
 .icon-sprite, .icon-comment, .icon-doc, .icon-feed {
-  background: url('/img/icon-s80c89e63f0.png') no-repeat;
+  background: url('/assets/img/icon-s80c89e63f0.png') no-repeat;
 }
 
 .icon-comment {
@@ -1078,7 +1078,7 @@ span.icon-feed {
 /* Right now I don't know if there's a good way to do with with
  * the icon mechanism provided by Compass. */
 a.icon-external {
-  background: url("/img/external.png") center right no-repeat;
+  background: url("/assets/img/external.png") center right no-repeat;
   padding-right: 13px;
 }
 

@@ -21,7 +21,7 @@ function path()
       ;
 
   for(var i = 0; i < args.length; i++)
-      result.push(args[i].replace('@', '/js/libs/syntaxhighlighter_3.0.83/'));
+      result.push(args[i].replace('@', '/assets/js/libs/syntaxhighlighter_3.0.83/'));
 
   return result
 };

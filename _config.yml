@@ -36,7 +36,6 @@ markdown: kramdown
 # A list of directories and files to exclude from publishing.
 exclude:
   - config.rb
-  - sass
   - Gemfile
   - Gemfile.lock
   - LICENSE

@@ -3,7 +3,7 @@ layout: page
 title: About Bloggyll
 ---
 
-![profile](/img/about/profile_m.gif){:.left}
+![profile](/assets/img/about/profile_m.gif){:.left}
 
 Bloggyll is a minimal [Jekyll][jekyll] theme utilizing
 [Compass][compass] and built from the [HTML5 Boilerplate][h5bp].  Many common
