@@ -1,0 +1,133 @@
+/* ==============
+ * Bauble Theme - Contains specific rules for the theme
+ * ==============
+
+$header-tail-length: 1080px
+$header-tail-opacity: .5
+$title-radius: 55px
+$tagline-radius: 34px
+$nav-radius: 13px
+
+#container
+  overflow: auto
+  padding-top: $title-radius + $tagline-radius + $nav-radius + 12px
+
+#header
+  text-align: right
+  letter-spacing: 0.1em
+
+  h1
+    position: absolute
+    top: 0
+    background-color: $bauble-title-bg
+    margin-left: -$header-tail-length !important
+    padding-left: $header-tail-length !important
+    padding-right: 55px
+    width: 475px + $title-radius
+    height: $title-radius
+    +border-bottom-right-radius($title-radius)
+  h2
+    top: $title-radius
+    position: absolute
+    background-color: $bauble-tagline-bg
+    margin-left: -$header-tail-length !important
+    padding-left: $header-tail-length !important
+    padding-right: $tagline-radius
+    width: 375px + $tagline-radius
+    height: $tagline-radius
+    +border-bottom-right-radius($tagline-radius)
+  h1, h2
+    line-height: 1.5
+    margin-bottom: 0
+
+#nav
+  ul, li
+    height: $nav-radius * 2
+  ul
+    border-bottom: none
+    position: absolute
+    top: $title-radius + $tagline-radius - 1px
+    +inline-block
+    +min-width(380px)
+    text-align: right
+    margin-left: -$header-tail-length !important
+    padding-left: $header-tail-length !important
+    background-color: $bauble-highlight-bg
+    +border-right-radius($nav-radius)
+  a
+    +border-radius($nav-radius)
+    font-family: $blueprint-font-family
+    letter-spacing: 0.1em
+    font-size: 100%
+    border: none
+    height: $nav-radius * 2 - 10px
+    padding:
+      left: $nav-radius
+      right: $nav-radius
+    margin-bottom: 0
+
+body
+  background-color: $blueprint-background-color
+  background: url('/assets/themes/bauble/img/bg.jpg')
+
+/* Dotted underline links
+a
+  +hover-link
+  border-bottom: 1px dotted
+  &:hover
+    border-bottom: none
+
+article.post
+  $article-title-radius: 19px
+  header
+    h1, h2, h3
+      position: absolute
+      +inline-block
+      +border-radius($article-title-radius)
+      margin-left: -$header-tail-length !important
+      padding-left: $header-tail-length !important
+      height: $article-title-radius * 2
+      padding-right: $article-title-radius
+      background-color: $bauble-article-title-bg
+      border-bottom: none
+      margin-bottom: 0.5em
+      &, a, a:visited
+        color: $title-text-color
+    p
+      border: none
+      padding:
+        left: 0
+        right: 0
+      padding-top: $article-title-radius * 2 + 12px
+      font-size: 1.25em
+      font-family: $bauble-title-font
+
+h1, h2, h3, h4, h5, h6
+  font-family: $bauble-title-font
+  a, a:visited
+    /* Preserve header color
+    color: $header-color
+    /* Cancel dotted underline.
+    border-bottom: none
+
+#sidebar
+  line-height: 1.5
+  h3
+    font-size: 2em
+    padding-bottom: 0.5em
+    margin-bottom: 0.5em
+    border-bottom: 1px solid $blueprint-border-color
+
+#footer
+  background: $bauble-title-bg
+  letter-spacing: 0.1em
+  font-size: 1.2em
+  height: $footer-height - 10px - 4px
+  padding-top: 10px
+  border-top: 4px solid $bauble-tagline-bg
+  font-style: normal
+  +border-top-radius($footer-height)
+  a
+    color: $alt-text-color
+    &:hover
+      color: white
