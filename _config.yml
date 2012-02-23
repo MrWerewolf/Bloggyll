@@ -13,7 +13,7 @@ email: mr.hyde@jekyll.net       # Site author's email
 #ga: UA-XXXXX-X                 # Google Analytics ID
 #disqus: xxxxxxxxx              # Disqus shortname
 
-#category_dir: /
+#theme: shadow-play             # Uncomment to activate theme.
 
 ###################
 # Jekyll Settings #

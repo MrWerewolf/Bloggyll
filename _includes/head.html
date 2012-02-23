@@ -16,7 +16,11 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
   <!-- CSS build using Compass-->
-  <link rel="stylesheet" href="/assets/style.css?{% render_timestamp %}">
+  {% if site.theme %}
+    <link rel="stylesheet" href="/assets/themes/{{ site.theme }}/style.css?{% render_timestamp %}">
+  {% else %}
+    <link rel="stylesheet" href="/assets/style.css?{% render_timestamp %}">
+  {% endif %}
   <!-- end CSS-->
 
   <link rel="alternate" type="application/atom+xml" title="Atom feed" href="{% page_feed_url %}" />
