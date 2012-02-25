@@ -422,13 +422,11 @@ form select {
 form fieldset {
   border: 1px solid #cccccc;
 }
-form input.text, form input.title, form input[type=email], form input[type=text], form input[type=password],
-form textarea {
+form input.text, form input.title, form input[type=email], form input[type=text], form input[type=password], form textarea {
   background-color: #fff;
   border: 1px solid #bbbbbb;
 }
-form input.text:focus, form input.title:focus, form input[type=email]:focus, form input[type=text]:focus, form input[type=password]:focus,
-form textarea:focus {
+form input.text:focus, form input.title:focus, form input[type=email]:focus, form input[type=text]:focus, form input[type=password]:focus, form textarea:focus {
   border-color: #666666;
 }
 form select {
@@ -1103,16 +1101,7 @@ a.icon-external {
   padding-right: 13px;
 }
 
-.syntaxhighlighter a,
-.syntaxhighlighter div,
-.syntaxhighlighter code,
-.syntaxhighlighter table,
-.syntaxhighlighter table td,
-.syntaxhighlighter table tr,
-.syntaxhighlighter table tbody,
-.syntaxhighlighter table thead,
-.syntaxhighlighter table caption,
-.syntaxhighlighter textarea {
+.syntaxhighlighter a, .syntaxhighlighter div, .syntaxhighlighter code, .syntaxhighlighter table, .syntaxhighlighter table td, .syntaxhighlighter table tr, .syntaxhighlighter table tbody, .syntaxhighlighter table thead, .syntaxhighlighter table caption, .syntaxhighlighter textarea {
   -moz-border-radius: 0 0 0 0 !important;
   -webkit-border-radius: 0 0 0 0 !important;
   background: none !important;
@@ -1251,11 +1240,7 @@ a.icon-external {
 .syntaxhighlighter.ie .toolbar a {
   padding-top: 0px !important;
 }
-.syntaxhighlighter.printing .line.alt1 .content,
-.syntaxhighlighter.printing .line.alt2 .content,
-.syntaxhighlighter.printing .line.highlighted .number,
-.syntaxhighlighter.printing .line.highlighted.alt1 .content,
-.syntaxhighlighter.printing .line.highlighted.alt2 .content {
+.syntaxhighlighter.printing .line.alt1 .content, .syntaxhighlighter.printing .line.alt2 .content, .syntaxhighlighter.printing .line.highlighted .number, .syntaxhighlighter.printing .line.highlighted.alt1 .content, .syntaxhighlighter.printing .line.highlighted.alt2 .content {
   background: none !important;
 }
 .syntaxhighlighter.printing .line .number {
