@@ -9,6 +9,8 @@
     {% endfor %}
   </ul>
   {% endif %}
+
+  {% if site.categories.size > 0 %}
   <h3><a href="/categories">Topics</a></h3>
   <ul>
     {% for category in site.sorted_categories %}
@@ -21,8 +23,12 @@
       </li>
     {% endfor %}
   </ul>
+  {% endif %}
+
+  {% if site.tags.size > 0 %}
   <h3><a href="/tags">Tags</a></h3>
   <div id="tagcloud">
     {% tag_cloud %}
   </div>
+  {% endif %}
 </aside>
