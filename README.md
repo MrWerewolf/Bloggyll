@@ -247,6 +247,12 @@ specifies global variables.  This comes recommended by Compass as part of their
 [best practices][compass-best-practices].
 * `_layout.sass` - Defines the main shape of your site.
 
+License Info
+------------
+
+Copyright (c) 2011 Ryan Seto <mr.werewolf@gmail.com>
+Licensed under the MIT license (http://www.opensource.org/licenses/mit-license.php)
+
 Contributing
 ------------
 
