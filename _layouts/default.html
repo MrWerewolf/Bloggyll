@@ -13,14 +13,7 @@
         {% if site.tagline %}<h2>{{ site.tagline }}</h2>{% endif %}
       </header>
       <nav id="nav">
-        <ul>
-          <li><a {% if page.url == "/index.html" %}class="selected"{% endif %}
-            href="/" rel="home">Home</a></li>
-          <li><a {% if page.url == "/archives/" %}class="selected"{% endif %}
-            href="/archives">Archives</a></li>
-          <li><a {% if page.url == "/about/" %}class="selected"{% endif %}
-            href="/about">About</a></li>
-        </ul>
+        {% menu main %}
       </nav>
       <div id="main" role="main">
         {{ content }}
